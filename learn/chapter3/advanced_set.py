@@ -97,7 +97,18 @@ for ch in word:
 
 every_second_char = word[1::2].upper()
 normal_chars = word[::2]
+
 print(normal_chars)
 print(every_second_char)
+
+index1 = 0
+index2 = 0
+result = ''
+while (index1 < len(normal_chars) and index2 < len(every_second_char)):
+    result += normal_chars[index1]
+    result += every_second_char[index2]
+    index1 += 1
+    index2 += 1
+
 print(result)
 print(new_word)
