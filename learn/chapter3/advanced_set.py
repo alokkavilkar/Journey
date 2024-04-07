@@ -112,3 +112,4 @@ while (index1 < len(normal_chars) and index2 < len(every_second_char)):
 
 print(result)
 print(new_word)
+
