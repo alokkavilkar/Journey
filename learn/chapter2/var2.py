@@ -72,3 +72,9 @@ print(round(7.8379, 0))
 print(round(784, -1)) # => takes from 4 to calculate next 78 so 780
 print(round(784, -2))
 print(round(784, -3))
+
+
+# print(10.0 /  3)
+# print(10.0 // 3)
+
+# print(10 / 3)
