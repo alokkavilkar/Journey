@@ -69,3 +69,4 @@ del my_dict["is_married"]
 
 print(my_dict)
 
+print(type(my_dict.items()))
