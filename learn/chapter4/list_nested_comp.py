@@ -35,4 +35,10 @@ matrix = [[10, 5, 8], [3, 12, 6], [7, 9, 11], [4, 5, 6]]
 
 result = [subitem for subitem in matrix if sum(subitem) >= 20]
 print(result)
+v = bin(3)
+print(v[2:])
+
+binary = [bin(x)[2:] for x in range(1, 11)]
+print(binary)
+
 
