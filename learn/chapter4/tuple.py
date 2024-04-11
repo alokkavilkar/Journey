@@ -7,7 +7,7 @@ a = (1,2, 3, 4, False, "Alok", (11, 20))
 print(type(a))
 print(a[0])
 print(a[-1][0])
-
+# a[1] = 2
 t1 = (1)
 print(type(t1)) # convert into int not a tuple thus, provide a comma
 t1 = (1,)
