@@ -22,10 +22,10 @@ print(my_dict["programming_lanugages"])
 
 # Characteristics of Dictionaries:
 # 1. Key value pair
-# 2. Immutable
+# 2. mutable
 # 3. Unordered
 # 4. indexed
-# 5. Cannot creates duplicates
+# 5. Cannot creates duplicates keys
 
 
 # ----------------- Methods in dictionaries. ---------
