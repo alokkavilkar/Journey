@@ -8,12 +8,14 @@
 class Product:
     store = 'Jai Maha'
     gst = 0.18
+    _no_count = 0
 
 
     def __init__(self, name, price, quantity) -> None:
         self.name = name
         self.price = price
         self.quantity = quantity
+        self.increase_count()
 
     @staticmethod
     def gst_rate(gst, price):
@@ -26,10 +28,21 @@ class Product:
     def calculate_total_cost(quantity, price, gst):
         return quantity * price + Product.gst_rate(price, gst)
     
+    @staticmethod
+    def increase_count():
+        Product._no_count += 1
+        
+    
 
 laptop = Product('Dell', 10000, 5)
 laptop.get_receipt()
 print(Product.gst)
-laptop.gst = 20
-print(Product.gst)
 print(laptop.gst)
+# laptop.increase_count()
+# Real use case of static method is that its access and shared location or variable.
+print(laptop.gst, Product.gst)
+print(laptop._no_count, Product._no_count)
+new_oops = Product('Dell', 20000, 6)
+print(new_oops.gst)
+print(laptop._no_count, Product._no_count)
+
