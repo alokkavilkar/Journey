@@ -45,4 +45,6 @@ print(laptop._no_count, Product._no_count)
 new_oops = Product('Dell', 20000, 6)
 print(new_oops.gst)
 print(laptop._no_count, Product._no_count)
-
+laptop.increase_count()
+print(laptop._no_count, Product._no_count)
+laptop.get_receipt()
