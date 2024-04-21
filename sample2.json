@@ -1,0 +1,1 @@
+"{\n    \"server1\":{\n        \"status\":\"online\",\n        \"ip\":\"192.168.1.1\"\n    },\n    \"server2\":{\n        \"status\":\"offline\",\n        \"ip\":\"192.168.1.2\"\n    }\n}"
