@@ -11,6 +11,9 @@ print(str.capitalize())
 print(str.upper())
 print(str.lower())
 print(str.casefold())
+
+
+
 print(str.count('a'))
 print(str.encode())
 # str = str.expandtabs(10)
@@ -45,6 +48,11 @@ print(str.rpartition('\n'))
 
 
 
-
+str = 'alok'
+newstr = 'New'.join(str)
+newstr = 'new'.join(['alok'])   # since no way to append with list of element returns single element
+newstr = ','.join(['alok', 'ram', 'mumbai'])
+print(newstr)
+print(newstr.split(','))
     
     
