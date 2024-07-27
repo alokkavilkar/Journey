@@ -27,28 +27,73 @@ def fib(n):
 ans = fib(10)
 print(ans)
 
-# multiple argument values;
+def function(name, lists):
+    for list_ in lists:
+        print(list_)
+    print(name)
 
-def argumental_function (*arg, default='no'):
-    for i in arg:
-        print(i, end=' ')
+list1 = [[1, 2, 3], [2, 3, 4]]
+# function("alok", list1)
 
-    print(default)
 
-argumental_function(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, default='This has passed by function invoker.')
-
-# Recursion
-
-# n! = n * (n - 1) * (n - 2) ...... 1
+# if mentioned parameter is default then can be argued with non sequence based argument.
+def defaultArg(name="stranger", another=0):
+    print(name, another)
+    
+defaultArg(another=10, name="alok")
 
 def factorial(n):
-
-    if n == 1:
-        return n
+    if n == 0:
+        return 1
     
     return n * factorial(n - 1)
+    
+print(factorial(5))
 
 
-f = factorial(5)
-print(f)
+# args and kwargs:
+
+# Positional arguments are collected into a tuple, allowing the function to handle any number of them.
+# Keyword arguments are collected into a dictionary, allowing for flexible and descriptive argument passing.
+# Mixing Arguments: When using both, positional arguments must come before keyword arguments when calling the function.
+
+# takes only vlaue args and convert it into tuples
+def func1(*args):
+    for v in args:
+        print(v, end=" ")
+        
+# takes variables and value as much as possible
+
+def func2(**kwargs):
+    for k, v in kwargs.items():
+        print(k, v)
+        
+func1(1, 2, 3, 4, 5, 6, 7, 8)
+func2(a=10, b=20, c=30)
+
+
+
+# Decorators takes fucntions and can access varibales and can call another function and return its wrapper
+
+print("------------------------------------------------------------")
+def debug(func):
+    def wrapper(*args, **kwargs):
+        print(f"Calling {func.__name__} with {args} and {kwargs}")
+        return func(*args, **kwargs)
+    return wrapper
+    
+def value(func):
+    def wrapper(args):
+        print("arguments are", args)
+        return func(args)
+    return wrapper
+    
+    
+@value
+def say_hello(name):
+    print(f"Hello, {name}!")
+
+say_hello("Alice")
+
+
 
