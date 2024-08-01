@@ -1,0 +1,50 @@
+# String Manipulation Complete in Shell Scripting.
+
+String manipulation in shell scripting, especially using parameter expansion, can indeed be a bit tricky. Let me break down some common techniques for string manipulation in shell scripts:
+
+### 1. **Substring Removal**
+
+- **Remove from the beginning:** `${var#pattern}`
+  - Removes the shortest match of `pattern` from the beginning of `var`.
+  - Example: `filename="file.txt"` → `${filename#*.}` results in `txt`.
+
+- **Remove from the end:** `${var%pattern}`
+  - Removes the shortest match of `pattern` from the end of `var`.
+  - Example: `filename="file.txt"` → `${filename%.txt}` results in `file`.
+
+- **Remove the longest match:** Use `##` or `%%` instead of `#` or `%`.
+
+### 2. **Substring Replacement**
+
+- **Replace the first occurrence:** `${var/pattern/replacement}`
+  - Replaces the first occurrence of `pattern` with `replacement`.
+  - Example: `var="banana"` → `${var/a/o}` results in `bonana`.
+
+- **Replace all occurrences:** `${var//pattern/replacement}`
+  - Replaces all occurrences of `pattern` with `replacement`.
+  - Example: `var="banana"` → `${var//a/o}` results in `bonono`.
+
+### 3. **Substring Extraction**
+
+- **Extract a substring:** `${var:position:length}`
+  - Extracts `length` characters starting from `position`.
+  - Example: `var="Hello, World!"` → `${var:7:5}` results in `World`.
+
+### 4. **Length of a String**
+
+- **Get the length:** `${#var}`
+  - Returns the length of the string.
+  - Example: `var="Hello"` → `${#var}` results in `5`.
+
+### Example
+
+To remove `/home/rich/test` from `$PATH`, assuming it could be at the start, middle, or end of the list, you could use:
+
+```bash
+PATH=${PATH/:\/home\/rich\/test/}
+PATH=${PATH//:\/home\/rich\/test/}
+PATH=${PATH//\/home\/rich\/test:}
+PATH=${PATH//\/home\/rich\/test/}
+```
+
+These lines handle various cases of the path's position in the list. The last command ensures that even if it's the last element (with no preceding colon), it's removed.
