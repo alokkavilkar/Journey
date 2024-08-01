@@ -1,0 +1,32 @@
+// Add user in linux 
+
+1. adduser -> addusers with command line paramter input
+2. useradd -> just name and creates without home directory for user and password.
+
+how to add password for user in useradd command
+
+// changes after user beign created using useradd
+sudo passwd 'name'
+usermod  --shell 'name' --shell /bin/bash  --> helps with rename and other things.
+
+// default user of linux got passwordless access to sudo and can use sudo to perform authorative access to something
+sudo cat /etc/sudeors.d/vagrant
+or if user in group of sudo or admin or as user entry in visudo file
+
+sudo visudo or add file of user in /etc/sudeors.d/username for permission
+add folloeing
+
+// asking password each time using sudo
+vagrant ALL=(ALL) ALL
+
+ALL -> Host on which host of machine
+ALL -> as all users
+ALL -> All commands.
+
+for not asking password each time
+vagrant ALL=(ALL) NOPASSWD: ALL
+
+
+
+
+
