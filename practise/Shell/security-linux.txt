@@ -23,6 +23,18 @@ ALL -> Host on which host of machine
 ALL -> as all users
 ALL -> All commands.
 
+Linux binary security code.
+
+7 => all
+4 => r only
+3 => e and w
+2 => w only
+1 => e only
+0 => not permission
+5 => r and e only
+6 => r and w only
+
+
 for not asking password each time
 vagrant ALL=(ALL) NOPASSWD: ALL
 
