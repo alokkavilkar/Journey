@@ -12,6 +12,7 @@ else:
       print('Entered number is greater than 10')
 finally:
     print("Enter here does'nt matter exception occur or not.")
+    # if exit() used in eception then also runs.
 
 # Error and exception is like error occurs and crash program and exception does'nt crash it.
 # Common Exception Types
