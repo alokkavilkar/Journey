@@ -6,6 +6,17 @@ var = 3 // 2 # returns the floor of the division value.
 var = 3 / 2  # returns the float value in python3 whereas returns floor value in python2
 print (var)
 
+# Python 2
+>>> 10.0 / 3
+3.3333333333333335
+>>> 10.0 // 3
+3.0
+
+# Python3
+>>> 10 / 3
+3.3333333333333335
+>>> 10 // 3
+3
 
 print("Floats --------------------------")
 
