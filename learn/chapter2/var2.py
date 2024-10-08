@@ -26,7 +26,7 @@ var = 0.2 + 0.1
 print(var)
 
 # Complex
-
+print("-------------Complex---------------")
 z = 2 + 1j
 z1 = 3 + 2j
 print(z + z1)
@@ -35,15 +35,41 @@ print(z + z1)
    - **bytes**: Represents immutable sequences of bytes. Example: `data = b'Hello'`
    - **bytearray**: Represents mutable sequences of bytes. Example: `data = bytearray(b'Hello')`'''
 
+print("--------------------- Bytes ---------------------")
+# bytes => immutable sequence of bytes for binary data 0-255 each.
+b = b'hello'
+print(b)
+# b[0] = 'Z' error as they are immutable
+# ASCII value of H
+print(b[0])
+
 data = b'Alok'
 print(data)
+# always give you the ASCII Value.
 # for bytes in data:
 #     print(bytes)
-
 
 data = b'01'
 # for val in data:
     # print(val)
+
+print("---------------------------- Bytearray ----------------------------")
+# bytearray => mutable sequence upto 0 - 0-255
+ba = bytearray(b'01')
+print(ba) # = 48 49
+# change to 50 ~= 2
+ba[0] = 50
+print(ba)  # 50 49
+
+print("--------------------------- Memory View ---------------------------------")
+# memoryview
+# same as bytes but It is useful for efficiently handling large datasets or parts of binary data.
+b = b'Hello'
+mv = memoryview(b)
+print(mv[0], b[0], ord('H'))
+# what is byte => smallest form and character has smallest form as ASCII thus all return same.
+
+# -------------------------------------------------------------------------
 
 data = 4
 number = 0
@@ -71,9 +97,7 @@ list = []
     # new_val = ord(val) - ord('A')
     # print(new_val)
 
-data = bytearray(b'alok')
-for val in data:
-    print(val)
+
 
 
 print(round(7.8379,  2))
