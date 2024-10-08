@@ -1,3 +1,40 @@
+# ----------------------- Binary format ----------------------------------------------
+
+String.valueOf(10) = "10"
+str(10)                     = "10"
+Integer.parseInt("10") = 10
+int("10")                 = 10
+Integer.parseInt("1101", 2) = 1101 in bytes
+int("1101")  = 1101
+Integer.toBinaryString(10) = "1010"
+bin(10)                         = "0b1010"
+
+# binary data 
+binarydata = 0b1101
+# always convert automatically to equivalent number.
+'''
+    str = binarydata[2:]
+    return int(str, 2)
+'''
+print(binarydata)
+
+# number to string 
+var1 = 10
+print(str(var1))
+
+# string to number
+var2 = "10"
+print(int(var2))
+
+# string number to binary number
+binary = "1101"
+print(int(binary), int(binary, 2))
+
+# number to binary format (string)
+print(bin(13))
+
+# ----------------------------------------------------------------------------------
+
 x = 10
 y = 'Hello'
 z = 20.05
