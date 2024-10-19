@@ -149,3 +149,91 @@ def caesor_chiper(text, shift):
     print(output)
 
 caesor_chiper('abcd', 1)
+
+
+str = '10'
+print(int(str))
+
+str_ = '-10'
+print(int(str_))
+
+str_bin = "101010"
+print(int(str_bin, 8))
+
+large_num = 1_000_000
+print(large_num)
+
+very_large_num = 1e10
+print(very_large_num)
+
+# binary numbers
+binary_number = 0b1010
+print(binary_number)
+
+bin_atr = '0b1010'
+print(float(int(bin_atr, 2)))
+
+num = 10
+print(bin(10)[2:])
+
+bytes_ = b'alok'
+# print(int(bytes_))
+
+
+# check contraints on size of integer
+import sys
+
+max_ = sys.maxsize
+print(max_)
+
+min_ = - sys.maxsize - 1
+print(min_)
+
+# how much size os allocated to variables
+small_number = 100
+print(sys.getsizeof(small_number)) # 28 bytes on platform
+
+# naturral code
+
+data, ans, j = 13, 0, 0
+
+while data:
+    rem = data % 2
+    ans += rem * (10 ** j)
+    j += 1
+    data = data // 2
+
+print(ans)
+
+
+# decima, to binary conversion
+data = 13 # 1010
+ans = 0
+j = 0
+while data:
+    rem = data & 1
+    # print(rem)
+    ans += rem * (10 ** j)
+    data >>= 1
+    j += 1
+
+print(ans)
+
+# binary to decimal
+data, ans, j = 1101, 0, 1
+while data:
+    rem = data % 10
+    if rem:
+        ans += j
+    
+    j *= 2
+    data = data // 10
+
+print(ans)
+
+
+
+
+
+
+
