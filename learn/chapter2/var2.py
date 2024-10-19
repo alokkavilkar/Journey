@@ -113,3 +113,39 @@ print(round(784, -3))
 # print(10.0 // 3)
 
 # print(10 / 3)
+
+
+'''
+   Ord => returns unicode value for single character if two character given then raises typerror, if no character given then too.
+   chr => takes unicode value and returns character for that value = char(3) => smiley and char(3 + ord('a') => c
+'''
+
+print(ord('a'))
+print(ord('0'))
+print(ord('😊')) 
+
+print(chr(ord('a')))
+
+# if no character provided then valueError
+# if 'ab' is given then TypeError as single is required 'a'
+
+print(chr((ord('b') - ord('a')) + 3 + ord('a')))
+
+
+print(chr(1 + ord('a')))
+# b =-> c
+print(chr((ord('b') - ord('a') + 1) % 26 + ord('a')))
+print(chr(2 + ord('a')))
+
+
+# design a caesor chiper with text and shift
+
+def caesor_chiper(text, shift):
+    output = ''
+    for char in text:
+        new_chr = chr((ord(char) - ord('a') + shift)%26 + ord('a'))
+        output += new_chr
+
+    print(output)
+
+caesor_chiper('abcd', 1)
