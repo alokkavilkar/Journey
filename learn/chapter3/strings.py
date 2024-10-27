@@ -28,6 +28,15 @@ new_name = 'aloka'
 print(new_name[::2])
 print(new_name[1::3])
 print(new_name[-5:-1]) # -5 included which is a and -1 < so its -2 'k'
+print(new_name[-5::])
+# print(start to end)
+# so the flow is always left to right
+# incase you write => -1 (which is last one) [-1:] then a and want to change the flow
+# write it as [-1::-1] it will right to lieft
+
+# if we watn some portion to be reversed then
+print(new_name[-3::][::-1])
+
 
 '''
 Index hote he 0 se start
@@ -60,6 +69,7 @@ array = np.array([[0, 1, 2],
 # print(array[::2]) same as arra[..., 2]
 print(array[1:3])
 print(array[1,2:])
+
 print(array[::,2:])
 
 
